@@ -45,19 +45,19 @@
 </head>
 <body>
 <h1></h1>
-<h1>자유게시판</h1>
+<h1>바이블 가이드</h1>
 <h3>${sessionScope.login.username} 님 안녕하세요! <a href="../login/logout">게시판으로 이동</a></h3>
 <table id="list" width="90%">
     <tr>
         <th>id</th>
         <th>카테고리</th>
-        <th>제목</th>
+        <th>목차</th>
         <th>장</th>
-        <th>내용</th>
         <th>절</th>
+        <th>말씀</th>
         <th>중요도</th>
-        <th>암기여부</th>
-        <th>등록일</th>
+        <th>암기완료</th>
+        <th>입력날짜</th>
         <th>수정일</th>
         <th>삭제</th>
     </tr>
@@ -67,16 +67,16 @@
             <td>${u.category}</td>
             <td>${u.title}</td>
             <td>${u.chapter}</td>
-            <td>${u.contents}</td>
             <td>${u.verse}</td>
+            <td>${u.contents}</td>
             <td>${u.stars}</td>
             <td>${u.isMemorized}</td>
             <td>${u.regDate}</td>
-            <td><a href="editform/${u.id}">글수정</a></td>
-            <td><a href="javascript:delete_ok('${u.id}')">글삭제</a></td>
+            <td><a href="editform/${u.id}">말씀 수정하기</a></td>
+            <td><a href="javascript:delete_ok('${u.id}')">말씀 삭제</a></td>
         </tr>
     </c:forEach>
 </table>
-<br/><a href="add">새글쓰기</a>
+<br/><a href="add">말씀 추가하기</a>
 </body>
 </html>
