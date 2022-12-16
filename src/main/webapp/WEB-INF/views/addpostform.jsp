@@ -23,7 +23,7 @@
         <tr><td>장</td><td><input type="text" name="chapter" required/></td></tr>
         <tr><td>절</td><td><input type="text" name="verse" required/></td></tr>
         <tr><td>말씀</td><td><textarea cols="50" rows="5" name="contents" required></textarea></td></tr>
-        <tr><td>중요도</td><td><input type="text" name="stars"/></td></tr>
+        <tr><td>중요도(1~5)</td><td><input type="text" name="stars"/></td></tr>
         <tr><td>암기완료</td><td><input type="checkbox" name="isMomorized" value=true/></td></tr>
     </table>
     <button type="reset">초기화</button>
