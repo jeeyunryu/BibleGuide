@@ -9,10 +9,14 @@ import java.util.Date;
 @Setter
 public class BoardVO {
 
-    private int seq;
+    private String contents;
+    private int chapter;
+    private int verse;
     private String title;
-    private Date regdate;
-    private String writer;
-    private String content;
     private String category;
+    private Boolean isMemorized;
+    private int stars;
+    private Date regDate;
+    private int id;
+
 }

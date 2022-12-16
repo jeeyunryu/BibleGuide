@@ -52,22 +52,28 @@
         <th>id</th>
         <th>카테고리</th>
         <th>제목</th>
-        <th>글쓴이</th>
+        <th>장</th>
         <th>내용</th>
+        <th>절</th>
+        <th>중요도</th>
+        <th>암기여부</th>
         <th>등록일</th>
-        <th>수정</th>
+        <th>수정일</th>
         <th>삭제</th>
     </tr>
     <c:forEach items="${list}" var="u">
         <tr>
-            <td>${u.seq}</td>
+            <td>${u.id}</td>
             <td>${u.category}</td>
             <td>${u.title}</td>
-            <td>${u.writer}</td>
-            <td>${u.content}</td>
-            <td>${u.regdate}</td>
-            <td><a href="editform/${u.seq}">글수정</a></td>
-            <td><a href="javascript:delete_ok('${u.seq}')">글삭제</a></td>
+            <td>${u.chapter}</td>
+            <td>${u.contents}</td>
+            <td>${u.verse}</td>
+            <td>${u.stars}</td>
+            <td>${u.isMemorized}</td>
+            <td>${u.regDate}</td>
+            <td><a href="editform/${u.id}">글수정</a></td>
+            <td><a href="javascript:delete_ok('${u.id}')">글삭제</a></td>
         </tr>
     </c:forEach>
 </table>

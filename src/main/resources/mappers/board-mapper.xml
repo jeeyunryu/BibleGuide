@@ -2,22 +2,33 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="Board">
     <insert id="insertBoard">
-        insert into BOARD (category, title, writer, content)
-        values
-        (#{category} , #{title} , #{writer} , #{content})
+        insert into bible (contents, chapter, verse, title, category, isMemorized, stars)
+        values (#{contents}, #{chapter}, #{verse}, #{title}, #{category}, #{isMemorized}, #{stars})
     </insert>
     <update id="updateBoard">
-        update BOARD
-        set title=#{title}, content=#{content}, writer=#{writer}, category=#{category}
-        where seq=#{seq}
+        update bible
+        set contents=#{contents},
+            chapter=#{chapter},
+            verse=#{verse},
+            title=#{title},
+            category=#{category},
+            isMemorized=#{isMemorized},
+            stars=#{stars}
+        where id = #{id}
     </update>
     <delete id="deleteBoard">
-        delete from BOARD where seq=#{seq}
+        delete
+        from bible
+        where id = #{id}
     </delete>
     <select id="getBoard" resultType="board">
-        select * from BOARD where seq=#{seq}
+        select *
+        from bible
+        where id = #{id}
     </select>
     <select id="getBoardList" resultType="board">
-        select * from BOARD order by seq desc
+        select *
+        from bible
+        order by id desc
     </select>
 </mapper>

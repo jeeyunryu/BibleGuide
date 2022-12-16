@@ -3,7 +3,7 @@
 <mapper namespace="User">
     <select id="getUser" resultType="com.example.board.UserVO">
         select userid, username
-        from member
+        from login
         where userid = #{userid}
           and password = #{password}
     </select>
