@@ -5,10 +5,10 @@
     <!-- Root Context: defines shared resources visible to all other web components -->
     <bean name="dataSource"
           class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-        <property name="url" value="jdbc:mysql://walab.handong.edu:3306/p3_22000323" />
-        <property name="username" value="p3_22000323" />
-        <property name="password" value="eing0ohG1i" />
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://walab.handong.edu:3306/p3_22000323"/>
+        <property name="username" value="p3_22000323"/>
+        <property name="password" value="eing0ohG1i"/>
     </bean>
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"></property>
