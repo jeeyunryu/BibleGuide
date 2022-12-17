@@ -23,7 +23,14 @@
         <tr><td>장</td><td><input type="text" name="chapter" required/></td></tr>
         <tr><td>절</td><td><input type="text" name="verse" required/></td></tr>
         <tr><td>말씀</td><td><textarea cols="50" rows="5" name="contents" required></textarea></td></tr>
-        <tr><td>중요도(1~5)</td><td><input type="text" name="stars"/></td></tr>
+<%--        <tr><td>중요도(1~5)</td><td><input type="text" name="stars"/></td></tr>--%>
+        <tr><td>중요도(1~5)</td><td><select name="stars">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select></td></tr>
         <tr><td>암기완료</td><td><input type="checkbox" name="isMomorized" value=true/></td></tr>
     </table>
     <button type="reset">초기화</button>
@@ -33,7 +40,7 @@
 <script>
     function check(){
         var imporatnce= document.form1.stars;
-        if(imporatnce.value != null &&(imporatnce.value<1||imporatnce.value>5)){
+        if(imporatnce.value == null /*&&(imporatnce.value<1||imporatnce.value>5)*/){
             alert("중요도에 1~5 사이에 숫자를 입력하십시오");
             return false;
         }
