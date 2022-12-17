@@ -46,19 +46,19 @@
 <body>
 <h1></h1>
 <h1>바이블 가이드</h1>
-<h3>${sessionScope.login.username} 님 안녕하세요! <a href="../login/logout">게시판으로 이동</a></h3>
+<h3>${sessionScope.login.username} 님 안녕하세요! <a href="../login/logout">로그아웃</a></h3>
 <table id="list" width="90%">
     <tr>
         <th>id</th>
         <th>카테고리</th>
-        <th>목차</th>
+        <th>제목</th>
         <th>장</th>
         <th>절</th>
         <th>말씀</th>
         <th>중요도</th>
         <th>암기완료</th>
         <th>입력날짜</th>
-        <th>수정일</th>
+        <th>수정</th>
         <th>삭제</th>
     </tr>
     <c:forEach items="${list}" var="u">
